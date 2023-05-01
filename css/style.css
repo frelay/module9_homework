@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main-form__input {
+    max-width: 12rem;
+    min-height: 2rem;
+}
+
+.main-form__btn {
+    max-width: 12rem;
+    min-height: 2rem;
+    cursor: pointer;
+}
+
+.cards {
+    max-width: 32rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cards__img {
+    display: block;
+    max-width: 12.5rem;
+    min-height: 9.375rem;
+}
+
+.cards__error-text {
+    background-color: red;
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
