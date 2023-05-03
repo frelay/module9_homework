@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 16rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main-form__btn {
+    cursor: pointer;
+}
+
+.result__error {
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: red;
+    max-width: 47.5rem;
+}

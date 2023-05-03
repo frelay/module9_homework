@@ -28,7 +28,6 @@ function useRequest(url, callback) {
 const btn = document.querySelector(".main-form__btn");
 const input = document.querySelector(".main-form__input");
 const cardsNode = document.querySelector(".cards");
-const body = document.querySelector("body");
 
 // Функция рендер
 function displayResult(apiData) {
