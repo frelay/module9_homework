@@ -38,8 +38,18 @@ function useRequest(pageNum, limitNum) {
         .then((json) => {
             // console.log(json);
             displayResult(json);
+            // Кладём в localStorage полученный JSON
+            localStorage.setItem("myJSON", JSON.stringify(json));
         })
         .catch((err) => err);
+}
+
+// Проверяем localStorage
+const myJSON = localStorage.getItem("myJSON");
+
+// Если в localStorage что то есть, то рисуем по данным из localStorage
+if (myJSON) {
+    displayResult(JSON.parse(myJSON));
 }
 
 // Обработчик для кнопки
@@ -82,11 +92,7 @@ btn.addEventListener("click", async () => {
 
         // Если все ОК, то отправляем запрос
         if (pageNum && limitNum) {
-            console.log(
-                `https://picsum.photos/v2/list?page=${pageNum}&limit=${limitNum}.`
-            );
-
-            const result = await useRequest(pageNum, limitNum);
+            await useRequest(pageNum, limitNum);
         }
     }
 });
